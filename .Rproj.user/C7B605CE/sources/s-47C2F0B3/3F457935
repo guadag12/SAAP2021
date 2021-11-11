@@ -3,7 +3,7 @@
     "path": "~/GitHub/SAAP2021/SAAP2021/politicxsentwitteR_SAAP2021.Rmd",
     "project_path": "politicxsentwitteR_SAAP2021.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "2113226153",
     "contents": "",
     "dirty": false,
     "created": 1636654346463.0,
@@ -11,14 +11,17 @@
     "relative_order": 1,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "163,2",
+        "scrollLine": "163",
+        "last_setup_crc32": "47C2F0B3603a76a6"
     },
     "folds": "",
-    "lastKnownWriteTime": 1636653678,
+    "lastKnownWriteTime": 1636662108,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1636653678,
+    "last_content_update": 1636662108597,
     "read_only": false,
     "read_only_alternatives": []
 }
