@@ -149,14 +149,6 @@ data_fr_fol %>%
   facet_wrap(~screen_name, scale="free_y") +
   geom_vline(xintercept = as.Date("2021-04-14"), color = "black") 
 #ggplotly(plot)
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-```
-
-=======
-```
-
-=======
 ```
 
 
@@ -171,87 +163,6 @@ network <- get_network_data("diputados")
 
 
 <img src="https://github.com/guadag12/SAAP2021/raw/main/images/interior_pp.png" width="120%" />
->>>>>>> Stashed changes
-
----
-class: middle, center
-
-```{r, echo=TRUE, include=FALSE, warning = FALSE, message=FALSE, eval=FALSE }
-library(politicxsentwitteR)
-
-network <- get_network_data("diputados")
-```
-
-
-<img src="https://github.com/guadag12/SAAP2021/raw/main/images/interior_pp.png" width="120%" />
-
-class: middle, center
-
-## Visitas a la app!
-```{r, echo=FALSE, message=FALSE, results = 'hide' }
-library(readxl)
-library(tidyverse)
-library(plotly)
-data_visitas_1_ <- read_excel("images/data_visitas (1).xlsx")
-head(data_visitas_1_)
-p <- data_visitas_1_ %>%
-  ggplot( aes(x=timestamp2, y=visitas)) +
-    geom_area(fill="#34b4eb", alpha=0.5) +
-    geom_line(color="#34b4eb") +
-    ylab("visitas a la app") +
-  xlab("Fecha") +
-    theme_bw()
-```
-
-
-```{r, echo=FALSE }
-# Turn it interactive with ggplotly
-p <- ggplotly(p)
-p
-```
-
-
----
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-
-class: middle, center
-
-## Visitas a la app!
-```{r, echo=FALSE, message=FALSE, results = 'hide' }
-library(readxl)
-library(tidyverse)
-library(plotly)
-data_visitas_1_ <- read_excel("images/data_visitas (1).xlsx")
-head(data_visitas_1_)
-p <- data_visitas_1_ %>%
-  ggplot( aes(x=timestamp2, y=visitas)) +
-    geom_area(fill="#34b4eb", alpha=0.5) +
-    geom_line(color="#34b4eb") +
-    ylab("visitas a la app") +
-  xlab("Fecha") +
-    theme_bw()
-```
-
-
-```{r, echo=FALSE }
-# Turn it interactive with ggplotly
-p <- ggplotly(p)
-p
-```
-
-
----
-
-<<<<<<< Updated upstream
-```{r, echo=TRUE, include=FALSE, warning = FALSE, message=FALSE, eval=FALSE }
-library(politicxsentwitteR)
-
-network <- get_network_data("diputados")
-```
-
-
-<img src="https://github.com/guadag12/SAAP2021/raw/main/images/interior_pp.png" width="80%" />
 
 ---
 
@@ -282,23 +193,6 @@ p
 
 
 ---
-
-class: middle, center
-
-
-## 160 mil tweets recolectados! 🔓🗂
-
-### Expansión multinivel! 🌎🕸
-=======
-class: middle, center
-
-
-## Expansión multinivel! 🌎🕸
-
-## 160 mil tweets recolectados! 🔓🗂
-
->>>>>>> Stashed changes
-=======
 
 class: middle, center
 
@@ -307,7 +201,6 @@ class: middle, center
 
 ## 160 mil tweets recolectados! 🔓🗂
 
->>>>>>> Stashed changes
 
 ---
 

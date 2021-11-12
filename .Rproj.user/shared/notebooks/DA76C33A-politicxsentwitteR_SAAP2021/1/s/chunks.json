@@ -1,6 +1,10 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 {"chunk_definitions":[{"row":24,"row_count":1,"visible":true,"expansion_state":0,"options":{"engine":"r","label":"setup","include":false},"document_id":"3F457935","chunk_id":"csetup_chunk","chunk_label":"setup"},{"row":98,"row_count":1,"visible":true,"expansion_state":0,"options":{"engine":"r","echo":true,"include":false,"label":"unnamed-chunk-5"},"document_id":"3F457935","chunk_id":"cqu3iayxzgpsz","chunk_label":"unnamed-chunk-1"},{"row":110,"row_count":1,"visible":true,"expansion_state":0,"options":{"engine":"r","echo":false,"include":false,"label":"unnamed-chunk-26"},"document_id":"3F457935","chunk_id":"cc6g0x2x5eudz","chunk_label":"unnamed-chunk-3"},{"row":114,"row_count":1,"visible":true,"expansion_state":0,"options":{"engine":"r","echo":true,"include":true,"label":"unnamed-chunk-29"},"document_id":"3F457935","chunk_id":"cjdytt32fj1wh","chunk_label":"unnamed-chunk-4"},{"row":125,"row_count":1,"visible":true,"expansion_state":0,"options":{"engine":"r","echo":true,"include":true,"warning":false,"message":false,"results":"hide","label":"unnamed-chunk-5"},"document_id":"3F457935","chunk_id":"ca73wuc67ry18","chunk_label":"unnamed-chunk-5"},{"row":130,"row_count":1,"visible":true,"expansion_state":0,"options":{"engine":"r","echo":true,"include":true,"label":"unnamed-chunk-30"},"document_id":"3F457935","chunk_id":"cqtycq656lme0","chunk_label":"unnamed-chunk-6"}],"doc_write_time":1636699139}
+=======
+{"chunk_definitions":[],"doc_write_time":1636703674}
+>>>>>>> Stashed changes
 =======
 {"chunk_definitions":[],"doc_write_time":1636703674}
 >>>>>>> Stashed changes
