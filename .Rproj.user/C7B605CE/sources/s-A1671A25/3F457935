@@ -3,11 +3,7 @@
     "path": "~/GitHub/SAAP2021/SAAP2021/politicxsentwitteR_SAAP2021.Rmd",
     "project_path": "politicxsentwitteR_SAAP2021.Rmd",
     "type": "r_markdown",
-<<<<<<< Updated upstream:.Rproj.user/C7B605CE/sources/s-460668EA/3F457935
-    "hash": "2927196162",
-=======
-    "hash": "3562694615",
->>>>>>> Stashed changes:.Rproj.user/C7B605CE/sources/s-A1671A25/3F457935
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1636654346463.0,
@@ -16,29 +12,16 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-<<<<<<< Updated upstream:.Rproj.user/C7B605CE/sources/s-460668EA/3F457935
-        "cursorPosition": "227,5",
-        "scrollLine": "204",
-        "last_setup_crc32": ""
-    },
-    "folds": "",
-    "lastKnownWriteTime": 1636703256,
-    "encoding": "UTF-8",
-    "collab_server": "",
-    "source_window": "",
-    "last_content_update": 1636703256838,
-=======
         "cursorPosition": "200,0",
         "scrollLine": "190",
         "last_setup_crc32": ""
     },
     "folds": "",
-    "lastKnownWriteTime": 1636704352,
+    "lastKnownWriteTime": 1636704554,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1636704352616,
->>>>>>> Stashed changes:.Rproj.user/C7B605CE/sources/s-A1671A25/3F457935
+    "last_content_update": 1636704554,
     "read_only": false,
     "read_only_alternatives": []
 }
