@@ -1,6 +1,0 @@
-"0","library(rmarkdown)"
-"0","library(devtools)"
-"2","Loading required package: usethis
-"
-"0","#install_github(""guadag12/politicxsentwitteR"", force = T)"
-"0","library(politicxsentwitteR)"

@@ -49,20 +49,30 @@ background-size: 200px 200px
 
 
 ---
+class: middle, center
+
+## GICP OBSERVATORIO DE REDES [@O_de_R](www.twitter.com/O_de_R)
+</br>
+
+.center[<img src="https://github.com/guadag12/talk-cienciassoccomputacionales/raw/main/img/img-juani.png" width="15%"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/guadag12/talk-cienciassoccomputacionales/raw/main/img/img-guada.png" width="15%">]
+#### [@juanibelbis](www.twitter.com/juanibelbis) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       [@guadag12](www.twitter.com/guadag12) 
+.center[<img src="https://github.com/guadag12/talk-cienciassoccomputacionales/raw/main/img/img-agos.png" width="15%"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/guadag12/talk-cienciassoccomputacionales/raw/main/img/img-maca.png" width="15%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/guadag12/talk-cienciassoccomputacionales/raw/main/img/img-angie.png" width="15%">
+]
+#### [@AgosSanguinetti](https://twitter.com/AgosSanguinetti) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [@macarenazappe](https://twitter.com/macarenazappe) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [@angielafuente](https://twitter.com/angielafuente) 
+
+---
 
 class: middle, center
 
-## Web 🇦🇷
 
-<img src="https://github.com/Observatorio-de-Redes/politicosentwitter/raw/main/ShinyApp/www/img_polentwitter.png" width="60%" />
+<img src="https://github.com/Observatorio-de-Redes/politicosentwitter/raw/main/ShinyApp/www/img_polentwitter.png" width="90%" />
 
 
 ##### [www.politicosentwitter.com](www.politicosentwitter.com)
 
 ---
 class: middle, center
-
-## Workflow
 
 <img src="https://github.com/guadag12/SAAP2021/raw/main/images/workflow.png" width="80%" />
 
@@ -85,7 +95,6 @@ class: middle, center
 ```{r, echo = TRUE, include = FALSE}
 library(rmarkdown)
 library(devtools)
-#install_github("guadag12/politicxsentwitteR", force = T)
 library(politicxsentwitteR)
 ```
 
@@ -102,7 +111,7 @@ af
 ```
 
 ```{r, echo=TRUE, include=TRUE}
-paged_table(head(af,3))
+paged_table(head(af,4))
 ```
 
 
@@ -116,43 +125,81 @@ library(tidyverse)
 data_fr_fol <- get_friends_followers(screen.name = c("alferdez", "horaciorlarreta"))
 ```
 
+
 ```{r, echo=TRUE, include=TRUE}
-paged_table(head(data_fr_fol %>% arrange(desc(date)),4))
+paged_table(head(data_fr_fol %>% arrange(desc(date)),6))
 ```
 
 ---
 
-```{r, echo=FALSE, include=FALSE, warning = FALSE, message=FALSE}
+class: middle, center
+
+## Evolución de followers de [@alferdez](https://twitter.com/alferdez) y [@horaciorlarreta](https://twitter.com/horaciorlarreta)
+
+```{r echo=FALSE, }
 library(ggpp)
+library(ggplot2)
+library(plotly)
 data_fr_fol %>% 
   ggplot() + 
-  geom_line(aes(x=as.Date(date), y=as.numeric(followers_count), color=screen_name)) + theme_bw() +
+  geom_line(aes(x=as.Date(date), y=as.numeric(followers_count), color=screen_name)) +
+  theme_bw() +
   scale_color_manual(values = c("#00459e", "#ba9200")) +
-  labs( x = "Fecha", y = "Cantidad", title = "Evolución de followers de @alferdez y @horaciorlarreta") +
+  labs( x = "Fecha", y = "Cantidad") +
   facet_wrap(~screen_name, scale="free_y") +
-  geom_vline(xintercept = as.Date("2021-04-14"),
-             color = "black") +
-  geom_text_npc(data = data.frame(x = c("center"),
-                                  y = c("top"),
-                                  label = c("Cierre escuelas 🎓")),
-                mapping = aes(npcx = x, npcy = y, label = label),
-                size = 4)
+  geom_vline(xintercept = as.Date("2021-04-14"), color = "black") 
+#ggplotly(plot)
 ```
 
----
 
 ---
 class: inverse, middle, center
 
-### - 30.000 views en 5 meses!
+```{r, echo=TRUE, include=FALSE, warning = FALSE, message=FALSE, eval=FALSE }
+library(politicxsentwitteR)
 
---
+network <- get_network_data("diputados")
+```
 
-### - Se descargaron más de 4 millones de tweets y se conservaron 160,000 tweets eliminados
 
---
+<img src="https://github.com/guadag12/SAAP2021/raw/main/images/interior_pp.png" width="80%" />
 
-### - Expansión multinivel!
+---
+
+class: middle, center
+
+## Visitas a la app!
+```{r, echo=FALSE, message=FALSE, results = 'hide' }
+library(readxl)
+library(tidyverse)
+library(plotly)
+data_visitas_1_ <- read_excel("images/data_visitas (1).xlsx")
+head(data_visitas_1_)
+p <- data_visitas_1_ %>%
+  ggplot( aes(x=timestamp2, y=visitas)) +
+    geom_area(fill="#34b4eb", alpha=0.5) +
+    geom_line(color="#34b4eb") +
+    ylab("visitas a la app") +
+  xlab("Fecha") +
+    theme_bw()
+```
+
+
+```{r, echo=FALSE }
+# Turn it interactive with ggplotly
+p <- ggplotly(p)
+p
+```
+
+
+---
+
+class: middle, center
+
+
+## 160 mil tweets recolectados! 🔓🗂
+
+### Expansión multinivel! 🌎🕸
 
 ---
 
@@ -176,9 +223,9 @@ class: middle, center
 
 ### Repositorio
 
-* Template ([link]())
+#### * Slides ([bit.ly/politicxsentwitter-saap](bit.ly/politicxsentwitter-saap))
 
-* Código ([link](https://github.com/guadag12/SAAP2021/))
+#### * Código ([link](https://github.com/guadag12/SAAP2021/))
 
 
 ---
@@ -188,7 +235,7 @@ class: inverse, middle, center
 # GRACIAS!🥰 
 </br>
 
-## ESTEMOS EN CONTACTO! 🙌 👇
+## PUEDEN ESCRIBIRNOS! 🙌 👇
 
 .pull-left[
 
